@@ -1,0 +1,5 @@
+[smtp]
+server = "smtp"
+port = 587
+username = "someone@example.com"
+password = "supersecret"
