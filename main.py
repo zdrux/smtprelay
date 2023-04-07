@@ -20,6 +20,11 @@ class RelayHandler(AsyncMessage):
         # send the received email
         await smtp_client.send_message(message)
 
+        # extract FROM and TO details from message
+        from_address = str(message['From'])
+        to_address = str(message['To'])
+        print(f"Sent email from {from_address} to {to_address}")
+
         # close the SMTP connection
         await smtp_client.quit()
 
